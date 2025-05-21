@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/signup_style.css" />
+
+  <!-- Fontawesome Icons -->
+  <script src="https://kit.fontawesome.com/4f0603c75f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">🩸 <strong>BLOOD BUCKET</strong></div>
+      <nav>
+        <a href="http://127.0.0.1:8000/">Home</a>
+        <a href="http://127.0.0.1:8000/#about">About</a>
+        <a href="http://127.0.0.1:8000/#why">Why Donate?</a>
+        <a href="http://127.0.0.1:8000/#how">How It Works</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Left Side: Image and Branding -->
+    <div class="left">
+      <img src="/assets/bg2.png" alt="Blood Bank Poster" />
+      <h1>Blood Bucket</h1>
+    </div>
+
+    <!-- Right Side: Sign Up Form -->
+    <div class="right">
+      <div class="form-container">
+        <h2>Sign Up</h2>
+
+        <!-- Full Name -->
+        <div class="input-group">
+          <label for="signupName">
+            <input type="text" id="signupName" required />
+            <span>Full Name</span>
+            <span class="user-icon"><i class="fa-solid fa-user"></i></span>
+          </label>
+
+
+          <!-- Email -->
+          <label for="signupEmail">
+            <input type="email" id="signupEmail" required />
+            <span>Email</span>
+            <span class="user-icon"><i class="fa-solid fa-user"></i></span>
+          </label>
+
+
+          <!-- Password -->
+          <label for="signupPassword">
+            <input type="password" id="signupPassword" required />
+            <span>Password</span>
+            <span class="icon" id="toggleSignupPassword">
+              <i class="fa-solid fa-eye-slash"></i>
+            </span>
+          </label>
+
+
+          <!-- Blood Group -->
+          <div class="list-container">
+            <label for="signupBloodGroup" class="list">
+              <select id="signupBloodGroup" required>
+                <option value="" hidden>Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </label>
+          </div>
+
+
+          <!-- City -->
+          <label for="signupCity">
+            <input type="text" id="signupCity" required />
+            <span>Your City</span>
+          </label>
+
+
+          <!-- Last Donation -->
+          <label for="signupLastDonation" class="date">
+            <input type="date" id="signupLastDonation" required />
+            <span>Last Donation Date</span>
+          </label>
+
+
+          <!-- Disease -->
+          <label for="signupDisease">
+            <input type="text" id="signupDisease" autocomplete="off" />
+            <p>Disease (if any)</p>
+          </label>
+
+
+          <!-- Age -->
+          <label for="signupAge">
+            <input type="number" id="signupAge" min="16" max="100" required />
+            <span>Age</span>
+          </label>
+
+
+
+          <!-- Radio buttons -->
+          <div class="radio-btn">
+            <!-- Gender -->
+            <p>Gender</p>
+            <div class="radio-group">
+              <label><input type="radio" name="signupGender" value="Male" checked /> Male</label>
+              <label><input type="radio" name="signupGender" value="Female" /> Female</label>
+              <label><input type="radio" name="signupGender" value="Other" /> Other</label>
+            </div>
+
+
+          <!-- Register As -->
+          <p>Register As</p>
+          <div class="radio-group">
+            <label><input type="radio" name="signupRole" value="donor" checked /> Donor</label>
+            <label><input type="radio" name="signupRole" value="patient" /> Patient</label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="submit-btn" id="signupBtn">Sign Up</button>
+
+        <!-- Switch to Login -->
+        <div class="switch-link">
+          Already have an account? <a href="login" class="fade-link">Login</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- Your JavaScript Logic -->
+  <script type="module" src="/static/app.js"></script>
+
+  <!-- For Password toggle logic -->
+   <script src="/static/toggle.js"></script>
+</body>
+
+</html>

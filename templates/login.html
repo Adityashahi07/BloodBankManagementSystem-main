@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Blood Bucket</title>
+  <link rel="stylesheet" href="/static/signup_style.css">
+
+  <!-- Fontawesome Icons -->
+  <script src="https://kit.fontawesome.com/4f0603c75f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+    
+    <div class="navbar">
+      <div class="logo">🩸 <strong>BLOOD BUCKET</strong></div>
+      <nav>
+        <a href="http://127.0.0.1:8000/">Home</a>
+        <a href="http://127.0.0.1:8000/#about">About</a>
+        <a href="http://127.0.0.1:8000/#why">Why Donate?</a>
+        <a href="http://127.0.0.1:8000/#how">How It Works</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <img src="/assets/bg2.png" alt="Blood Bank Poster">
+      <h1>Blood Bucket</h1>
+    </div>
+
+      <div class="form-container">
+        <h2>Login</h2>
+        <form>
+        <div class="input-group">
+          <label for="loginEmail">
+            <input type="email" id="loginEmail" required>
+            <span>Email</span>
+            <span class="user-icon"><i class="fa-solid fa-user"></i></span>
+          </label>
+
+
+          <label for="loginPassword">
+            <input type="password" id="loginPassword" required>
+            <span>Password</span>
+            <span class="icon" id="toggleSigninPassword">
+              <i class="fa-solid fa-eye-slash"></i>
+            </span>
+          </label>
+        </div>
+
+
+
+        <button class="submit-btn" id="loginBtn">Sign In</button>
+        <div class="switch-link">
+          Don’t have an account? <a href="signup">Register</a>
+        </div>
+      </form>
+      </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="/static/app.js" type="module"></script>
+  <script src="/static/app.js"></script>
+
+  <!-- For Password toggle logic -->
+   <script src="/static/toggle.js"></script>
+</body>
+</html>
